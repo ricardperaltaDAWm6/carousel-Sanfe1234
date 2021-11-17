@@ -7,16 +7,31 @@
     <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
 </head>
 <body>
-    <!-- the content goes here -->
-    <p>Imeges carousel</p>
-    <div class="carousel">
-        <button id="retroceder">Retroceder</button>
-        <div id="imagen"></div>
-        <button id="avanzar">Avanzar</button>
+<!-- the content goes here -->
+<p>Carousels Manolito</p>
+<div class="carousel">
+    <div id="circle" class="circle">
+        <p id="name"></p>
     </div>
-    <div class="controles">
-        <button id="play">Play</button>
-        <button id="stop" disabled>Stop</button>
-    </div>
+    <button id="retroceder" onclick="retrocederFoto()">Retroceder</button>
+    <img src="img/img1.jpg" id="imagen" class='zoom' alt="">
+    <button id="avanzar" onclick="pasarFoto()">Avanzar</button>
+</div>
+<div class="controles">
+    <button id="play">Play</button>
+    <button id="stop" disabled>Stop</button>
+</div>
+<br><br>
+<h2>Controls:</h2>
+<ul>
+    <li>Fletxa dreta: Seguent imatge</li>
+    <li>Fletxa esquerra: Anterior imatge</li>
+    <li>Espai: Play/Stop AutoPlay</li>
+</ul>
+
+<script src="wheelzoom.js"></script>
+<script>
+    wheelzoom(document.querySelector('#imagen.zoom'));
+</script>
 </body>
 </html>
